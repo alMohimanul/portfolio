@@ -1,0 +1,8 @@
+services:
+  portfolio:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_FORMSPREE_ENDPOINT=${NEXT_PUBLIC_FORMSPREE_ENDPOINT}
+    restart: unless-stopped
