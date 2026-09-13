@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { profile } from "@/data/profile";
 import { GradientText } from "@/components/ui/GradientText";
@@ -60,15 +61,15 @@ export function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
-        <a href="/projects" className="gradient-border-glow glass-card rounded-full px-6 py-3 text-sm font-semibold">
+        <Link href="/projects" className="gradient-border-glow glass-card rounded-full px-6 py-3 text-sm font-semibold">
           View Projects
-        </a>
-        <a
+        </Link>
+        <Link
           href="/contact"
           className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold transition hover:border-white/30"
         >
           Get in Touch
-        </a>
+        </Link>
       </motion.div>
     </section>
   );
