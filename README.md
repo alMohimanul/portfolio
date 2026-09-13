@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Al Mohimanul Islam
 
-## Getting Started
+Personal portfolio site built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion. Live project data is pulled from GitHub at runtime; the contact form is powered by Formspree.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in NEXT_PUBLIC_FORMSPREE_ENDPOINT
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Required | Description |
+| --- | --- | --- |
+| `NEXT_PUBLIC_FORMSPREE_ENDPOINT` | For the contact form to work | Create a free form at https://formspree.io and paste its endpoint URL. Without it, the contact page shows a "reach out directly" notice instead of a broken form. |
 
-## Learn More
+## Testing
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test        # run once
+npm run test:watch
+npm run lint
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Docker (local/dev parity)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker compose up --build
+```
 
-## Deploy on Vercel
+Serves the site at `http://localhost:3000`. This image is **not** used for production — see Deployment below.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed on Vercel:
+
+1. Connect this GitHub repo to a new Vercel project — framework is auto-detected as Next.js, no configuration needed.
+2. Add the `NEXT_PUBLIC_FORMSPREE_ENDPOINT` environment variable in the Vercel project settings.
+3. Push to `main` — Vercel builds and deploys automatically, with a preview URL on every PR.
+
+## Project structure
+
+- `app/` — routes (App Router)
+- `components/` — UI components, grouped by area (`ui`, `layout`, `home`, `projects`, `experience`, `contact`)
+- `data/` — typed content (profile, skills, experience, education, publications, awards, featured projects)
+- `lib/` — framework-agnostic logic (GitHub API client + fallback, project filter/sort, contact form validation)
