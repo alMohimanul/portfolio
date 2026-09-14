@@ -15,9 +15,12 @@ export function FeaturedProjectCard({ project }: { project: FeaturedProject }) {
           </span>
         ))}
       </div>
-      <div className="mt-auto flex gap-4 pt-2 text-sm font-semibold">
-        <Link href={`/projects/${project.slug}`} className="underline underline-offset-4">
-          Case study →
+      <div className="mt-auto flex flex-wrap items-center gap-3 pt-2 text-sm font-semibold">
+        <Link
+          href={`/projects/${project.slug}`}
+          className="rounded-full border px-4 py-1.5 text-xs transition hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-muted)]"
+        >
+          Case study
         </Link>
         {project.githubUrl ? (
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">

@@ -7,9 +7,9 @@ import { profile } from "@/data/profile";
 import { GradientText } from "@/components/ui/GradientText";
 
 const ROLES = [
-  "Machine Learning Engineer",
-  "Backend Engineer",
+  "AI/ML Engineer",
   "LLM Agent Builder",
+  "Forward Deployed Engineer",
   "Computer Vision Researcher",
 ];
 
