@@ -19,11 +19,7 @@ export function Navbar() {
 
   return (
     <header className="nav-bar sticky top-0 z-50">
-      <div className="relative mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
-        <Link href="/" className="gradient-text text-lg font-bold">
-          Al Mohimanul
-        </Link>
-
+      <div className="relative mx-auto flex max-w-5xl items-center justify-end gap-4 px-6 py-4">
         <nav className="hidden items-center gap-6 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
