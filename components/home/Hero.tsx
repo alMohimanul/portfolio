@@ -23,7 +23,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(139,92,246,0.35),_transparent_70%)] blur-3xl" />
+        <div className="absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(139,92,246,0.14),_transparent_70%)] blur-3xl" />
       </motion.div>
 
       <motion.p
@@ -66,7 +66,7 @@ export function Hero() {
         </Link>
         <Link
           href="/contact"
-          className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold transition hover:border-white/30"
+          className="rounded-full border px-6 py-3 text-sm font-semibold transition hover:border-[var(--color-border-strong)]"
         >
           Get in Touch
         </Link>

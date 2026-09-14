@@ -10,7 +10,7 @@ export function FeaturedProjectCard({ project }: { project: FeaturedProject }) {
       <p className="text-sm opacity-80">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.stack.map((tech) => (
-          <span key={tech} className="rounded-full border border-white/10 px-2.5 py-0.5 text-xs">
+          <span key={tech} className="rounded-full border px-2.5 py-0.5 text-xs">
             {tech}
           </span>
         ))}

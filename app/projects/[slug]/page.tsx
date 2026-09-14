@@ -46,7 +46,7 @@ export default async function ProjectDetailPage({
       <SectionReveal delay={0.15}>
         <div className="flex flex-wrap gap-2">
           {project.stack.map((tech) => (
-            <span key={tech} className="rounded-full border border-white/10 px-3 py-1 text-xs">
+            <span key={tech} className="rounded-full border px-3 py-1 text-xs">
               {tech}
             </span>
           ))}

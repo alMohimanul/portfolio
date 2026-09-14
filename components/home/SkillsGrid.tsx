@@ -20,7 +20,7 @@ export function SkillsGrid() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.items.map((item) => (
-                  <span key={item} className="rounded-full border border-white/10 px-3 py-1 text-xs">
+                  <span key={item} className="rounded-full border px-3 py-1 text-xs">
                     {item}
                   </span>
                 ))}

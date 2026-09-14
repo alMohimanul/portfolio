@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f8f9fc;
-  --color-fg: #05050a;
-  --color-surface: rgba(5, 5, 10, 0.04);
-  --color-border: rgba(5, 5, 10, 0.1);
+  --color-bg: #ffffff;
+  --color-fg: #111114;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f5f7;
+  --color-border: rgba(15, 15, 20, 0.1);
+  --color-border-strong: rgba(15, 15, 20, 0.22);
+  --color-nav-bg: rgba(255, 255, 255, 0.92);
   --color-accent-from: #7c3aed;
   --color-accent-to: #0891b2;
+  --shadow-card: 0 1px 2px rgba(15, 15, 20, 0.04), 0 4px 16px rgba(15, 15, 20, 0.05);
 }
 
 .dark {
-  --color-bg: #05050a;
-  --color-fg: #f5f5f7;
-  --color-surface: rgba(255, 255, 255, 0.06);
-  --color-border: rgba(255, 255, 255, 0.12);
+  --color-bg: #0a0a0d;
+  --color-fg: #f2f2f5;
+  --color-surface: #141417;
+  --color-surface-muted: #1b1b1f;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.24);
+  --color-nav-bg: rgba(10, 10, 13, 0.85);
   --color-accent-from: #a78bfa;
   --color-accent-to: #22d3ee;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.24);
 }
 
 * {
@@ -31,9 +39,15 @@ body {
 .glass-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border-radius: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.nav-bar {
+  background-color: var(--color-nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .gradient-text {
@@ -44,10 +58,10 @@ body {
 }
 
 .gradient-border-glow {
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .gradient-border-glow:hover {
-  box-shadow: 0 0 32px 0 color-mix(in srgb, var(--color-accent-to) 35%, transparent);
-  transform: translateY(-2px);
+  border-color: var(--color-accent-to);
+  box-shadow: 0 2px 12px 0 color-mix(in srgb, var(--color-accent-to) 18%, transparent);
 }

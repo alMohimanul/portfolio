@@ -9,15 +9,15 @@ describe("ThemeToggle", () => {
     document.documentElement.classList.remove("dark");
   });
 
-  it("defaults to dark mode and toggles to light on click", async () => {
+  it("defaults to light mode and toggles to dark on click", async () => {
     const user = userEvent.setup();
     render(<ThemeToggle />);
 
-    expect(document.documentElement.classList.contains("dark")).toBe(true);
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
 
     await user.click(screen.getByRole("button", { name: "Toggle color theme" }));
 
-    expect(document.documentElement.classList.contains("dark")).toBe(false);
-    expect(window.localStorage.getItem("theme")).toBe("light");
+    expect(document.documentElement.classList.contains("dark")).toBe(true);
+    expect(window.localStorage.getItem("theme")).toBe("dark");
   });
 });

@@ -11,11 +11,11 @@ function subscribe(callback: () => void) {
 }
 
 function getSnapshot() {
-  return window.localStorage.getItem(THEME_STORAGE_KEY) !== "light";
+  return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark";
 }
 
 function getServerSnapshot() {
-  return true;
+  return false;
 }
 
 function setTheme(isDark: boolean) {
@@ -35,7 +35,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(!isDark)}
       aria-label="Toggle color theme"
-      className="rounded-full border border-white/10 px-3 py-1.5 text-sm transition hover:border-white/30"
+      className="rounded-full border px-3 py-1.5 text-sm transition hover:border-[var(--color-border-strong)]"
     >
       {isDark ? "🌙" : "☀️"}
     </button>
