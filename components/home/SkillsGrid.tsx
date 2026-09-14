@@ -11,11 +11,14 @@ export function SkillsGrid() {
           <GradientText>Skills</GradientText>
         </h2>
       </SectionReveal>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {skills.map((category, i) => (
-          <SectionReveal key={category.category} delay={i * 0.05}>
-            <GlassCard>
-              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide opacity-70">
+      <SectionReveal delay={0.05}>
+        <GlassCard className="flex flex-col divide-y">
+          {skills.map((category) => (
+            <div
+              key={category.category}
+              className="flex flex-col gap-3 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:gap-6"
+            >
+              <h3 className="shrink-0 text-sm font-semibold uppercase tracking-wide opacity-60 sm:w-32">
                 {category.category}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -25,10 +28,10 @@ export function SkillsGrid() {
                   </span>
                 ))}
               </div>
-            </GlassCard>
-          </SectionReveal>
-        ))}
-      </div>
+            </div>
+          ))}
+        </GlassCard>
+      </SectionReveal>
     </section>
   );
 }
