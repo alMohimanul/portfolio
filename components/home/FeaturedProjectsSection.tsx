@@ -19,9 +19,9 @@ export function FeaturedProjectsSection() {
           </SectionReveal>
         ))}
       </div>
-      <div className="mt-8 text-center">
-        <Link href="/projects" className="text-sm font-semibold underline underline-offset-4">
-          View all projects →
+      <div className="mt-8 flex justify-center">
+        <Link href="/projects" className="link-pill">
+          View all projects
         </Link>
       </div>
     </section>

@@ -7,17 +7,19 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}
         </p>
-        <div className="flex gap-4">
-          <a href={profile.github} target="_blank" rel="noopener noreferrer">
+        <div className="flex flex-wrap gap-2">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="link-pill">
             GitHub
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="link-pill">
             LinkedIn
           </a>
-          <a href={profile.scholar} target="_blank" rel="noopener noreferrer">
+          <a href={profile.scholar} target="_blank" rel="noopener noreferrer" className="link-pill">
             Scholar
           </a>
-          <a href={`mailto:${profile.email}`}>Email</a>
+          <a href={`mailto:${profile.email}`} className="link-pill">
+            Email
+          </a>
         </div>
       </div>
     </footer>

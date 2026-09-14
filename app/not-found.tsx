@@ -8,8 +8,8 @@ export default function NotFound() {
         <GradientText>404</GradientText>
       </h1>
       <p className="opacity-80">This page doesn&apos;t exist — maybe it moved, maybe it never did.</p>
-      <Link href="/" className="underline underline-offset-4">
-        Back to home →
+      <Link href="/" className="link-pill">
+        Back to home
       </Link>
     </div>
   );

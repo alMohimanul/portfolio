@@ -68,15 +68,15 @@ export default async function ProjectDetailPage({
       </SectionReveal>
 
       <SectionReveal delay={0.25}>
-        <div className="flex gap-4 text-sm font-semibold">
+        <div className="flex flex-wrap gap-2">
           {project.githubUrl ? (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
-              View on GitHub →
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="link-pill">
+              View on GitHub
             </a>
           ) : null}
           {project.liveUrl ? (
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
-              Live Demo →
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="link-pill">
+              Live Demo
             </a>
           ) : null}
         </div>

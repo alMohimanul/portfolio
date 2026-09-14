@@ -13,13 +13,8 @@ export function RepoCard({ repo }: { repo: RepoCardData }) {
         <span>{repo.language ?? "—"}</span>
         <span>{new Date(repo.updatedAt).toLocaleDateString()}</span>
       </div>
-      <a
-        href={repo.homepage || repo.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm font-semibold underline underline-offset-4"
-      >
-        View →
+      <a href={repo.homepage || repo.url} target="_blank" rel="noopener noreferrer" className="link-pill self-start">
+        View
       </a>
     </GlassCard>
   );

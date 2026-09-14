@@ -16,8 +16,8 @@ export function ExperienceTeaser() {
             {current.role} · <GradientText>{current.company}</GradientText>
           </h3>
           <p className="opacity-80">{current.bullets[0]}</p>
-          <Link href="/experience" className="text-sm font-semibold underline underline-offset-4">
-            See full experience →
+          <Link href="/experience" className="link-pill self-start">
+            See full experience
           </Link>
         </GlassCard>
       </SectionReveal>

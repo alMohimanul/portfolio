@@ -28,17 +28,17 @@ export default function ContactPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.2}>
-        <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold">
-          <a href={`mailto:${profile.email}`} className="underline underline-offset-4">
+        <div className="flex flex-wrap justify-center gap-2">
+          <a href={`mailto:${profile.email}`} className="link-pill">
             Email
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="link-pill">
             LinkedIn
           </a>
-          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="link-pill">
             GitHub
           </a>
-          <a href={profile.scholar} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+          <a href={profile.scholar} target="_blank" rel="noopener noreferrer" className="link-pill">
             Google Scholar
           </a>
         </div>
